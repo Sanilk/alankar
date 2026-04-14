@@ -6,8 +6,10 @@ export default function Home() {
   return (
     <main className="bg-white text-gray-900 dark:bg-black dark:text-white">
 
+      {/* HERO (LCP candidate handled inside HeroCarousel ideally) */}
       <HeroCarousel />
 
+      {/* FEATURED PRODUCTS */}
       <section className="py-16 px-6 md:px-20">
         <h2 className="text-2xl font-semibold mb-8 text-center">
           Featured Products
@@ -17,14 +19,23 @@ export default function Home() {
           {[1, 2, 3].map((item) => (
             <div
               key={item}
-              className="border dark:border-gray-700 p-4 rounded-lg"
+              className="border dark:border-gray-700 p-4 rounded-lg transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"
             >
-              <div className="relative h-64 mb-4">
+              <div className="relative h-64 mb-4 overflow-hidden rounded-md group">
                 <Image
                   src={`/images/product${item}.jpg`}
                   alt="Product"
                   fill
-                  className="object-cover rounded-md"
+
+                  /* 🚀 PERFORMANCE BOOSTS */
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  priority={item === 1} // only first visible image loads immediately
+
+                  /* 🧠 smooth loading */
+                  placeholder="blur"
+                  blurDataURL="/images/blur-placeholder.avif"
+
+                  className="object-cover transition-transform duration-500 group-hover:scale-110 group-hover:brightness-110"
                 />
               </div>
 
@@ -35,6 +46,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* CATEGORIES */}
       <section className="py-16 bg-gray-100 dark:bg-gray-900 px-6 md:px-20">
         <h2 className="text-2xl font-semibold mb-8 text-center">
           Shop by Category
@@ -48,14 +60,21 @@ export default function Home() {
           ].map((cat) => (
             <div
               key={cat.name}
-              className="relative h-40 rounded-lg overflow-hidden"
+              className="relative h-40 rounded-lg overflow-hidden group"
             >
               <Image
                 src={cat.img}
                 alt={cat.name}
                 fill
-                className="object-cover"
+
+                /* 🚀 IMPORTANT FOR PERFORMANCE */
+                sizes="(max-width: 768px) 100vw, 33vw"
+                placeholder="blur"
+                blurDataURL="/images/blur-placeholder.jpg"
+
+                className="object-cover transition-transform duration-500 group-hover:scale-110 group-hover:brightness-110"
               />
+
               <div className="absolute inset-0 bg-black/40 flex items-center justify-center text-white text-xl font-semibold">
                 {cat.name}
               </div>
@@ -64,15 +83,18 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ABOUT */}
       <section className="py-16 px-6 md:px-20 text-center">
         <h2 className="text-2xl font-semibold mb-4">
           Our Story
         </h2>
+
         <p className="max-w-2xl mx-auto text-gray-600 dark:text-gray-400">
           We create unique, handcrafted fashion pieces that celebrate individuality and elegance.
         </p>
       </section>
 
+      {/* CTA */}
       <section className="py-16 bg-black text-white text-center dark:bg-white dark:text-black">
         <h2 className="text-2xl mb-4">
           Ready to Elevate Your Style?

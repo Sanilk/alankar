@@ -1,13 +1,11 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-/* Remove system theme + CSS variables approach */
+@layer base {
+  body {
+    @apply bg-white text-black transition-colors duration-300;
+  }
 
-body {
-  @apply bg-white text-black transition-colors duration-300;
-}
-
-.dark body {
-  @apply bg-black text-white;
+  .dark body {
+    @apply bg-black text-white;
+  }
 }
