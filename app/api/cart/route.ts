@@ -1,6 +1,5 @@
-import { Product } from "@/types";
+import { fetchProducts } from "@/lib/services/productService";
 
-export async function GET(): Promise<Response> {
-  const products: Product[] = await fetchProducts();
-  return Response.json({ success: true, data: products });
+export async function GET() {
+
 }
