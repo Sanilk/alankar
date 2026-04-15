@@ -32,7 +32,7 @@ export default function HeroCarousel() {
   };
 
   return (
-    <div className="relative w-full h-[400px] overflow-hidden">
+    <div className="relative w-full h-[600px] overflow-hidden">
 
       {/* IMAGE */}
       <Image
@@ -40,7 +40,7 @@ export default function HeroCarousel() {
         alt="Hero banner"
         fill
         priority
-        className="object-cover transition-all duration-700"
+        className="object-cover object-center md:object-top transition-all duration-700"
       />
 
       {/* DARK OVERLAY */}
