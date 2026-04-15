@@ -2,7 +2,7 @@ import "./globals.css";
 // import ThemeToggle from "@/components/ThemeToggle";
 
 export const metadata = {
-  title: "Boutique Store",
+  title: "Alankar",
   description: "E-commerce boutique",
 };
 
