@@ -1,3 +1,6 @@
-export default function OrdersPage() {
-  return <div>Orders Page</div>;
+import { Product } from "@/types";
+
+export async function GET(): Promise<Response> {
+  const products: Product[] = await fetchProducts();
+  return Response.json({ success: true, data: products });
 }
