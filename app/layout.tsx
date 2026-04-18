@@ -2,6 +2,7 @@ import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { Toaster } from "react-hot-toast";
+import Providers from "./providers";
 
 export const metadata = {
   title: "Alankar",
@@ -16,10 +17,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="transition-colors duration-300">
-        <Navbar />
-        <Toaster position="top-right" />
-        {children}
-      <Footer />
+
+        <Providers>
+          <Navbar />
+          <Toaster position="top-right" />
+
+          {children}
+
+          <Footer />
+        </Providers>
+
       </body>
     </html>
   );
