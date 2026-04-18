@@ -30,11 +30,11 @@ export default function Home() {
     { id: "1", name: "Floral Dress", price: "₹1,499", image: "/images/product1.jpg" },
     { id: "2", name: "Casual Top", price: "₹799", image: "/images/product2.jpg" },
     { id: "3", name: "Stylish Handbag", price: "₹1,999", image: "/images/product3.jpg" },
-    { id: "4", name: "Summer Outfit", price: "₹2,299", image: "/images/product1.jpg" },
+    { id: "4", name: "Summer Outfit", price: "₹2,299", image: "/images/product4.jpg" },
     { id: "5", name: "Floral Dress", price: "₹1,499", image: "/images/product1.jpg" },
     { id: "6", name: "Casual Top", price: "₹799", image: "/images/product2.jpg" },
     { id: "7", name: "Stylish Handbag", price: "₹1,999", image: "/images/product3.jpg" },
-    { id: "8", name: "Summer Outfit", price: "₹2,299", image: "/images/product1.jpg" },
+    { id: "8", name: "Summer Outfit", price: "₹2,299", image: "/images/product4.jpg" },
   ];
 
   const testimonials: Testimonial[] = [
@@ -79,9 +79,12 @@ export default function Home() {
               Unique boutique collections crafted just for you.
             </p>
 
-            <button className="mt-6 px-6 py-3 bg-white text-black rounded-full hover:bg-gray-200 transition">
-              Shop Now
-            </button>
+            <Link
+              href="/shop">
+              <button className="mt-6 px-6 py-3 bg-white text-black rounded-full hover:bg-gray-200 transition">
+                Shop Now
+              </button>
+            </Link>
           </div>
         </div>
       </section>
