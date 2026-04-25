@@ -1,0 +1,1002 @@
+[
+  {
+    "id": "1",
+    "name": "Floral Dress 1",
+    "price": 799,
+    "image": "/images/product1.jpg",
+    "description": "Stylish floral dress 1 designed for modern fashion.",
+    "details": "High-quality fabric with elegant stitching, perfect for daily and occasional wear.",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "sizeChart": "/images/size-chart.jpg",
+    "inStock": false,
+    "quantityAvailable": 16,
+    "productCode": "PRD-1000",
+    "discount": 10,
+    "featured": false
+  },
+  {
+    "id": "2",
+    "name": "Casual Top 2",
+    "price": 949,
+    "image": "/images/product2.jpg",
+    "description": "Stylish casual top 2 designed for modern fashion.",
+    "details": "High-quality fabric with elegant stitching, perfect for daily and occasional wear.",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "sizeChart": "/images/size-chart.jpg",
+    "inStock": true,
+    "quantityAvailable": 16,
+    "productCode": "PRD-1001",
+    "discount": 0,
+    "featured": true
+  },
+  {
+    "id": "3",
+    "name": "Summer Dress 3",
+    "price": 1099,
+    "image": "/images/product3.jpg",
+    "description": "Stylish summer dress 3 designed for modern fashion.",
+    "details": "High-quality fabric with elegant stitching, perfect for daily and occasional wear.",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "sizeChart": "/images/size-chart.jpg",
+    "inStock": true,
+    "quantityAvailable": 4,
+    "productCode": "PRD-1002",
+    "discount": 0,
+    "featured": true
+  },
+  {
+    "id": "4",
+    "name": "Elegant Gown 4",
+    "price": 1249,
+    "image": "/images/product4.jpg",
+    "description": "Stylish elegant gown 4 designed for modern fashion.",
+    "details": "High-quality fabric with elegant stitching, perfect for daily and occasional wear.",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "sizeChart": "/images/size-chart.jpg",
+    "inStock": true,
+    "quantityAvailable": 4,
+    "productCode": "PRD-1003",
+    "discount": 0,
+    "featured": true
+  },
+  {
+    "id": "5",
+    "name": "Denim Jacket 5",
+    "price": 1399,
+    "image": "/images/product1.jpg",
+    "description": "Stylish denim jacket 5 designed for modern fashion.",
+    "details": "High-quality fabric with elegant stitching, perfect for daily and occasional wear.",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "sizeChart": "/images/size-chart.jpg",
+    "inStock": true,
+    "quantityAvailable": 2,
+    "productCode": "PRD-1004",
+    "discount": 0,
+    "featured": true
+  },
+  {
+    "id": "6",
+    "name": "Silk Saree 6",
+    "price": 1549,
+    "image": "/images/product2.jpg",
+    "description": "Stylish silk saree 6 designed for modern fashion.",
+    "details": "High-quality fabric with elegant stitching, perfect for daily and occasional wear.",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "sizeChart": "/images/size-chart.jpg",
+    "inStock": true,
+    "quantityAvailable": 18,
+    "productCode": "PRD-1005",
+    "discount": 10,
+    "featured": true
+  },
+  {
+    "id": "7",
+    "name": "Linen Shirt 7",
+    "price": 1699,
+    "image": "/images/product3.jpg",
+    "description": "Stylish linen shirt 7 designed for modern fashion.",
+    "details": "High-quality fabric with elegant stitching, perfect for daily and occasional wear.",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "sizeChart": "/images/size-chart.jpg",
+    "inStock": true,
+    "quantityAvailable": 6,
+    "productCode": "PRD-1006",
+    "discount": 0,
+    "featured": true
+  },
+  {
+    "id": "8",
+    "name": "Party Wear Dress 8",
+    "price": 1849,
+    "image": "/images/product4.jpg",
+    "description": "Stylish party wear dress 8 designed for modern fashion.",
+    "details": "High-quality fabric with elegant stitching, perfect for daily and occasional wear.",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "sizeChart": "/images/size-chart.jpg",
+    "inStock": false,
+    "quantityAvailable": 3,
+    "productCode": "PRD-1007",
+    "discount": 0,
+    "featured": true
+  },
+  {
+    "id": "9",
+    "name": "Maxi Dress 9",
+    "price": 1999,
+    "image": "/images/product1.jpg",
+    "description": "Stylish maxi dress 9 designed for modern fashion.",
+    "details": "High-quality fabric with elegant stitching, perfect for daily and occasional wear.",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "sizeChart": "/images/size-chart.jpg",
+    "inStock": true,
+    "quantityAvailable": 2,
+    "productCode": "PRD-1008",
+    "discount": 0,
+    "featured": true
+  },
+  {
+    "id": "10",
+    "name": "Handbag 10",
+    "price": 2149,
+    "image": "/images/product2.jpg",
+    "description": "Stylish handbag 10 designed for modern fashion.",
+    "details": "High-quality fabric with elegant stitching, perfect for daily and occasional wear.",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "sizeChart": "/images/size-chart.jpg",
+    "inStock": true,
+    "quantityAvailable": 9,
+    "productCode": "PRD-1009",
+    "discount": 0,
+    "featured": true
+  },
+  {
+    "id": "11",
+    "name": "Floral Dress 11",
+    "price": 799,
+    "image": "/images/product3.jpg",
+    "description": "Stylish floral dress 11 designed for modern fashion.",
+    "details": "High-quality fabric with elegant stitching, perfect for daily and occasional wear.",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "sizeChart": "/images/size-chart.jpg",
+    "inStock": true,
+    "quantityAvailable": 1,
+    "productCode": "PRD-1010",
+    "discount": 10,
+    "featured": false
+  },
+  {
+    "id": "12",
+    "name": "Casual Top 12",
+    "price": 949,
+    "image": "/images/product4.jpg",
+    "description": "Stylish casual top 12 designed for modern fashion.",
+    "details": "High-quality fabric with elegant stitching, perfect for daily and occasional wear.",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "sizeChart": "/images/size-chart.jpg",
+    "inStock": true,
+    "quantityAvailable": 1,
+    "productCode": "PRD-1011",
+    "discount": 0,
+    "featured": true
+  },
+  {
+    "id": "13",
+    "name": "Summer Dress 13",
+    "price": 1099,
+    "image": "/images/product1.jpg",
+    "description": "Stylish summer dress 13 designed for modern fashion.",
+    "details": "High-quality fabric with elegant stitching, perfect for daily and occasional wear.",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "sizeChart": "/images/size-chart.jpg",
+    "inStock": true,
+    "quantityAvailable": 11,
+    "productCode": "PRD-1012",
+    "discount": 0,
+    "featured": true
+  },
+  {
+    "id": "14",
+    "name": "Elegant Gown 14",
+    "price": 1249,
+    "image": "/images/product2.jpg",
+    "description": "Stylish elegant gown 14 designed for modern fashion.",
+    "details": "High-quality fabric with elegant stitching, perfect for daily and occasional wear.",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "sizeChart": "/images/size-chart.jpg",
+    "inStock": true,
+    "quantityAvailable": 2,
+    "productCode": "PRD-1013",
+    "discount": 0,
+    "featured": true
+  },
+  {
+    "id": "15",
+    "name": "Denim Jacket 15",
+    "price": 1399,
+    "image": "/images/product3.jpg",
+    "description": "Stylish denim jacket 15 designed for modern fashion.",
+    "details": "High-quality fabric with elegant stitching, perfect for daily and occasional wear.",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "sizeChart": "/images/size-chart.jpg",
+    "inStock": false,
+    "quantityAvailable": 20,
+    "productCode": "PRD-1014",
+    "discount": 0,
+    "featured": true
+  },
+  {
+    "id": "16",
+    "name": "Silk Saree 16",
+    "price": 1549,
+    "image": "/images/product4.jpg",
+    "description": "Stylish silk saree 16 designed for modern fashion.",
+    "details": "High-quality fabric with elegant stitching, perfect for daily and occasional wear.",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "sizeChart": "/images/size-chart.jpg",
+    "inStock": true,
+    "quantityAvailable": 12,
+    "productCode": "PRD-1015",
+    "discount": 10,
+    "featured": true
+  },
+  {
+    "id": "17",
+    "name": "Linen Shirt 17",
+    "price": 1699,
+    "image": "/images/product1.jpg",
+    "description": "Stylish linen shirt 17 designed for modern fashion.",
+    "details": "High-quality fabric with elegant stitching, perfect for daily and occasional wear.",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "sizeChart": "/images/size-chart.jpg",
+    "inStock": true,
+    "quantityAvailable": 14,
+    "productCode": "PRD-1016",
+    "discount": 0,
+    "featured": true
+  },
+  {
+    "id": "18",
+    "name": "Party Wear Dress 18",
+    "price": 1849,
+    "image": "/images/product2.jpg",
+    "description": "Stylish party wear dress 18 designed for modern fashion.",
+    "details": "High-quality fabric with elegant stitching, perfect for daily and occasional wear.",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "sizeChart": "/images/size-chart.jpg",
+    "inStock": true,
+    "quantityAvailable": 7,
+    "productCode": "PRD-1017",
+    "discount": 0,
+    "featured": true
+  },
+  {
+    "id": "19",
+    "name": "Maxi Dress 19",
+    "price": 1999,
+    "image": "/images/product3.jpg",
+    "description": "Stylish maxi dress 19 designed for modern fashion.",
+    "details": "High-quality fabric with elegant stitching, perfect for daily and occasional wear.",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "sizeChart": "/images/size-chart.jpg",
+    "inStock": true,
+    "quantityAvailable": 8,
+    "productCode": "PRD-1018",
+    "discount": 0,
+    "featured": true
+  },
+  {
+    "id": "20",
+    "name": "Handbag 20",
+    "price": 2149,
+    "image": "/images/product4.jpg",
+    "description": "Stylish handbag 20 designed for modern fashion.",
+    "details": "High-quality fabric with elegant stitching, perfect for daily and occasional wear.",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "sizeChart": "/images/size-chart.jpg",
+    "inStock": true,
+    "quantityAvailable": 14,
+    "productCode": "PRD-1019",
+    "discount": 0,
+    "featured": true
+  },
+  {
+    "id": "21",
+    "name": "Floral Dress 21",
+    "price": 799,
+    "image": "/images/product1.jpg",
+    "description": "Stylish floral dress 21 designed for modern fashion.",
+    "details": "High-quality fabric with elegant stitching, perfect for daily and occasional wear.",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "sizeChart": "/images/size-chart.jpg",
+    "inStock": true,
+    "quantityAvailable": 6,
+    "productCode": "PRD-1020",
+    "discount": 10,
+    "featured": false
+  },
+  {
+    "id": "22",
+    "name": "Casual Top 22",
+    "price": 949,
+    "image": "/images/product2.jpg",
+    "description": "Stylish casual top 22 designed for modern fashion.",
+    "details": "High-quality fabric with elegant stitching, perfect for daily and occasional wear.",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "sizeChart": "/images/size-chart.jpg",
+    "inStock": false,
+    "quantityAvailable": 15,
+    "productCode": "PRD-1021",
+    "discount": 0,
+    "featured": true
+  },
+  {
+    "id": "23",
+    "name": "Summer Dress 23",
+    "price": 1099,
+    "image": "/images/product3.jpg",
+    "description": "Stylish summer dress 23 designed for modern fashion.",
+    "details": "High-quality fabric with elegant stitching, perfect for daily and occasional wear.",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "sizeChart": "/images/size-chart.jpg",
+    "inStock": true,
+    "quantityAvailable": 15,
+    "productCode": "PRD-1022",
+    "discount": 0,
+    "featured": true
+  },
+  {
+    "id": "24",
+    "name": "Elegant Gown 24",
+    "price": 1249,
+    "image": "/images/product4.jpg",
+    "description": "Stylish elegant gown 24 designed for modern fashion.",
+    "details": "High-quality fabric with elegant stitching, perfect for daily and occasional wear.",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "sizeChart": "/images/size-chart.jpg",
+    "inStock": true,
+    "quantityAvailable": 13,
+    "productCode": "PRD-1023",
+    "discount": 0,
+    "featured": true
+  },
+  {
+    "id": "25",
+    "name": "Denim Jacket 25",
+    "price": 1399,
+    "image": "/images/product1.jpg",
+    "description": "Stylish denim jacket 25 designed for modern fashion.",
+    "details": "High-quality fabric with elegant stitching, perfect for daily and occasional wear.",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "sizeChart": "/images/size-chart.jpg",
+    "inStock": true,
+    "quantityAvailable": 12,
+    "productCode": "PRD-1024",
+    "discount": 0,
+    "featured": true
+  },
+  {
+    "id": "26",
+    "name": "Silk Saree 26",
+    "price": 1549,
+    "image": "/images/product2.jpg",
+    "description": "Stylish silk saree 26 designed for modern fashion.",
+    "details": "High-quality fabric with elegant stitching, perfect for daily and occasional wear.",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "sizeChart": "/images/size-chart.jpg",
+    "inStock": true,
+    "quantityAvailable": 1,
+    "productCode": "PRD-1025",
+    "discount": 10,
+    "featured": true
+  },
+  {
+    "id": "27",
+    "name": "Linen Shirt 27",
+    "price": 1699,
+    "image": "/images/product3.jpg",
+    "description": "Stylish linen shirt 27 designed for modern fashion.",
+    "details": "High-quality fabric with elegant stitching, perfect for daily and occasional wear.",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "sizeChart": "/images/size-chart.jpg",
+    "inStock": true,
+    "quantityAvailable": 19,
+    "productCode": "PRD-1026",
+    "discount": 0,
+    "featured": true
+  },
+  {
+    "id": "28",
+    "name": "Party Wear Dress 28",
+    "price": 1849,
+    "image": "/images/product4.jpg",
+    "description": "Stylish party wear dress 28 designed for modern fashion.",
+    "details": "High-quality fabric with elegant stitching, perfect for daily and occasional wear.",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "sizeChart": "/images/size-chart.jpg",
+    "inStock": true,
+    "quantityAvailable": 4,
+    "productCode": "PRD-1027",
+    "discount": 0,
+    "featured": true
+  },
+  {
+    "id": "29",
+    "name": "Maxi Dress 29",
+    "price": 1999,
+    "image": "/images/product1.jpg",
+    "description": "Stylish maxi dress 29 designed for modern fashion.",
+    "details": "High-quality fabric with elegant stitching, perfect for daily and occasional wear.",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "sizeChart": "/images/size-chart.jpg",
+    "inStock": false,
+    "quantityAvailable": 4,
+    "productCode": "PRD-1028",
+    "discount": 0,
+    "featured": true
+  },
+  {
+    "id": "30",
+    "name": "Handbag 30",
+    "price": 2149,
+    "image": "/images/product2.jpg",
+    "description": "Stylish handbag 30 designed for modern fashion.",
+    "details": "High-quality fabric with elegant stitching, perfect for daily and occasional wear.",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "sizeChart": "/images/size-chart.jpg",
+    "inStock": true,
+    "quantityAvailable": 5,
+    "productCode": "PRD-1029",
+    "discount": 0,
+    "featured": true
+  },
+  {
+    "id": "31",
+    "name": "Floral Dress 31",
+    "price": 799,
+    "image": "/images/product3.jpg",
+    "description": "Stylish floral dress 31 designed for modern fashion.",
+    "details": "High-quality fabric with elegant stitching, perfect for daily and occasional wear.",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "sizeChart": "/images/size-chart.jpg",
+    "inStock": true,
+    "quantityAvailable": 15,
+    "productCode": "PRD-1030",
+    "discount": 10,
+    "featured": false
+  },
+  {
+    "id": "32",
+    "name": "Casual Top 32",
+    "price": 949,
+    "image": "/images/product4.jpg",
+    "description": "Stylish casual top 32 designed for modern fashion.",
+    "details": "High-quality fabric with elegant stitching, perfect for daily and occasional wear.",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "sizeChart": "/images/size-chart.jpg",
+    "inStock": true,
+    "quantityAvailable": 10,
+    "productCode": "PRD-1031",
+    "discount": 0,
+    "featured": true
+  },
+  {
+    "id": "33",
+    "name": "Summer Dress 33",
+    "price": 1099,
+    "image": "/images/product1.jpg",
+    "description": "Stylish summer dress 33 designed for modern fashion.",
+    "details": "High-quality fabric with elegant stitching, perfect for daily and occasional wear.",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "sizeChart": "/images/size-chart.jpg",
+    "inStock": true,
+    "quantityAvailable": 18,
+    "productCode": "PRD-1032",
+    "discount": 0,
+    "featured": true
+  },
+  {
+    "id": "34",
+    "name": "Elegant Gown 34",
+    "price": 1249,
+    "image": "/images/product2.jpg",
+    "description": "Stylish elegant gown 34 designed for modern fashion.",
+    "details": "High-quality fabric with elegant stitching, perfect for daily and occasional wear.",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "sizeChart": "/images/size-chart.jpg",
+    "inStock": true,
+    "quantityAvailable": 11,
+    "productCode": "PRD-1033",
+    "discount": 0,
+    "featured": true
+  },
+  {
+    "id": "35",
+    "name": "Denim Jacket 35",
+    "price": 1399,
+    "image": "/images/product3.jpg",
+    "description": "Stylish denim jacket 35 designed for modern fashion.",
+    "details": "High-quality fabric with elegant stitching, perfect for daily and occasional wear.",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "sizeChart": "/images/size-chart.jpg",
+    "inStock": true,
+    "quantityAvailable": 18,
+    "productCode": "PRD-1034",
+    "discount": 0,
+    "featured": true
+  },
+  {
+    "id": "36",
+    "name": "Silk Saree 36",
+    "price": 1549,
+    "image": "/images/product4.jpg",
+    "description": "Stylish silk saree 36 designed for modern fashion.",
+    "details": "High-quality fabric with elegant stitching, perfect for daily and occasional wear.",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "sizeChart": "/images/size-chart.jpg",
+    "inStock": false,
+    "quantityAvailable": 18,
+    "productCode": "PRD-1035",
+    "discount": 10,
+    "featured": true
+  },
+  {
+    "id": "37",
+    "name": "Linen Shirt 37",
+    "price": 1699,
+    "image": "/images/product1.jpg",
+    "description": "Stylish linen shirt 37 designed for modern fashion.",
+    "details": "High-quality fabric with elegant stitching, perfect for daily and occasional wear.",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "sizeChart": "/images/size-chart.jpg",
+    "inStock": true,
+    "quantityAvailable": 8,
+    "productCode": "PRD-1036",
+    "discount": 0,
+    "featured": true
+  },
+  {
+    "id": "38",
+    "name": "Party Wear Dress 38",
+    "price": 1849,
+    "image": "/images/product2.jpg",
+    "description": "Stylish party wear dress 38 designed for modern fashion.",
+    "details": "High-quality fabric with elegant stitching, perfect for daily and occasional wear.",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "sizeChart": "/images/size-chart.jpg",
+    "inStock": true,
+    "quantityAvailable": 15,
+    "productCode": "PRD-1037",
+    "discount": 0,
+    "featured": true
+  },
+  {
+    "id": "39",
+    "name": "Maxi Dress 39",
+    "price": 1999,
+    "image": "/images/product3.jpg",
+    "description": "Stylish maxi dress 39 designed for modern fashion.",
+    "details": "High-quality fabric with elegant stitching, perfect for daily and occasional wear.",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "sizeChart": "/images/size-chart.jpg",
+    "inStock": true,
+    "quantityAvailable": 2,
+    "productCode": "PRD-1038",
+    "discount": 0,
+    "featured": true
+  },
+  {
+    "id": "40",
+    "name": "Handbag 40",
+    "price": 2149,
+    "image": "/images/product4.jpg",
+    "description": "Stylish handbag 40 designed for modern fashion.",
+    "details": "High-quality fabric with elegant stitching, perfect for daily and occasional wear.",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "sizeChart": "/images/size-chart.jpg",
+    "inStock": true,
+    "quantityAvailable": 16,
+    "productCode": "PRD-1039",
+    "discount": 0,
+    "featured": true
+  },
+  {
+    "id": "41",
+    "name": "Floral Dress 41",
+    "price": 799,
+    "image": "/images/product1.jpg",
+    "description": "Stylish floral dress 41 designed for modern fashion.",
+    "details": "High-quality fabric with elegant stitching, perfect for daily and occasional wear.",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "sizeChart": "/images/size-chart.jpg",
+    "inStock": true,
+    "quantityAvailable": 16,
+    "productCode": "PRD-1040",
+    "discount": 10,
+    "featured": false
+  },
+  {
+    "id": "42",
+    "name": "Casual Top 42",
+    "price": 949,
+    "image": "/images/product2.jpg",
+    "description": "Stylish casual top 42 designed for modern fashion.",
+    "details": "High-quality fabric with elegant stitching, perfect for daily and occasional wear.",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "sizeChart": "/images/size-chart.jpg",
+    "inStock": true,
+    "quantityAvailable": 13,
+    "productCode": "PRD-1041",
+    "discount": 0,
+    "featured": true
+  },
+  {
+    "id": "43",
+    "name": "Summer Dress 43",
+    "price": 1099,
+    "image": "/images/product3.jpg",
+    "description": "Stylish summer dress 43 designed for modern fashion.",
+    "details": "High-quality fabric with elegant stitching, perfect for daily and occasional wear.",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "sizeChart": "/images/size-chart.jpg",
+    "inStock": false,
+    "quantityAvailable": 2,
+    "productCode": "PRD-1042",
+    "discount": 0,
+    "featured": true
+  },
+  {
+    "id": "44",
+    "name": "Elegant Gown 44",
+    "price": 1249,
+    "image": "/images/product4.jpg",
+    "description": "Stylish elegant gown 44 designed for modern fashion.",
+    "details": "High-quality fabric with elegant stitching, perfect for daily and occasional wear.",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "sizeChart": "/images/size-chart.jpg",
+    "inStock": true,
+    "quantityAvailable": 16,
+    "productCode": "PRD-1043",
+    "discount": 0,
+    "featured": true
+  },
+  {
+    "id": "45",
+    "name": "Denim Jacket 45",
+    "price": 1399,
+    "image": "/images/product1.jpg",
+    "description": "Stylish denim jacket 45 designed for modern fashion.",
+    "details": "High-quality fabric with elegant stitching, perfect for daily and occasional wear.",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "sizeChart": "/images/size-chart.jpg",
+    "inStock": true,
+    "quantityAvailable": 7,
+    "productCode": "PRD-1044",
+    "discount": 0,
+    "featured": true
+  },
+  {
+    "id": "46",
+    "name": "Silk Saree 46",
+    "price": 1549,
+    "image": "/images/product2.jpg",
+    "description": "Stylish silk saree 46 designed for modern fashion.",
+    "details": "High-quality fabric with elegant stitching, perfect for daily and occasional wear.",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "sizeChart": "/images/size-chart.jpg",
+    "inStock": true,
+    "quantityAvailable": 11,
+    "productCode": "PRD-1045",
+    "discount": 10,
+    "featured": true
+  },
+  {
+    "id": "47",
+    "name": "Linen Shirt 47",
+    "price": 1699,
+    "image": "/images/product3.jpg",
+    "description": "Stylish linen shirt 47 designed for modern fashion.",
+    "details": "High-quality fabric with elegant stitching, perfect for daily and occasional wear.",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "sizeChart": "/images/size-chart.jpg",
+    "inStock": true,
+    "quantityAvailable": 2,
+    "productCode": "PRD-1046",
+    "discount": 0,
+    "featured": true
+  },
+  {
+    "id": "48",
+    "name": "Party Wear Dress 48",
+    "price": 1849,
+    "image": "/images/product4.jpg",
+    "description": "Stylish party wear dress 48 designed for modern fashion.",
+    "details": "High-quality fabric with elegant stitching, perfect for daily and occasional wear.",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "sizeChart": "/images/size-chart.jpg",
+    "inStock": true,
+    "quantityAvailable": 5,
+    "productCode": "PRD-1047",
+    "discount": 0,
+    "featured": true
+  },
+  {
+    "id": "49",
+    "name": "Maxi Dress 49",
+    "price": 1999,
+    "image": "/images/product1.jpg",
+    "description": "Stylish maxi dress 49 designed for modern fashion.",
+    "details": "High-quality fabric with elegant stitching, perfect for daily and occasional wear.",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "sizeChart": "/images/size-chart.jpg",
+    "inStock": true,
+    "quantityAvailable": 1,
+    "productCode": "PRD-1048",
+    "discount": 0,
+    "featured": true
+  },
+  {
+    "id": "50",
+    "name": "Handbag 50",
+    "price": 2149,
+    "image": "/images/product2.jpg",
+    "description": "Stylish handbag 50 designed for modern fashion.",
+    "details": "High-quality fabric with elegant stitching, perfect for daily and occasional wear.",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "sizeChart": "/images/size-chart.jpg",
+    "inStock": false,
+    "quantityAvailable": 8,
+    "productCode": "PRD-1049",
+    "discount": 0,
+    "featured": true
+  }
+]

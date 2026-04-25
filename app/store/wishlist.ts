@@ -12,10 +12,21 @@ type WishlistState = {
   items: WishlistItem[];
   hasHydrated: boolean;
 
+  setHasHydrated: (state: boolean) => void;
+  setItems: (items: WishlistItem[]) => void;
+
   toggleWishlist: (item: WishlistItem) => void;
   isInWishlist: (id: string) => boolean;
-  setHasHydrated: (state: boolean) => void;
 };
+
+async function syncWishlist(items: WishlistItem[]) {
+  await fetch("/api/wishlist", {
+    method: "POST",
+    body: JSON.stringify({ items }),
+    headers: { "Content-Type": "application/json" },
+    credentials: "include",
+  });
+}
 
 export const useWishlist = create<WishlistState>()(
   persist(
@@ -25,18 +36,22 @@ export const useWishlist = create<WishlistState>()(
 
       setHasHydrated: (state) => set({ hasHydrated: state }),
 
-      toggleWishlist: (item) => {
-        const exists = get().items.find((i) => i.id === item.id);
+      setItems: (items) => set({ items }),
+
+      toggleWishlist: (product) => {
+        const state = get();
+        const exists = state.items.find((i) => i.id === product.id);
+
+        let updated;
 
         if (exists) {
-          set({
-            items: get().items.filter((i) => i.id !== item.id),
-          });
+          updated = state.items.filter((i) => i.id !== product.id);
         } else {
-          set({
-            items: [...get().items, item],
-          });
+          updated = [...state.items, product];
         }
+
+        set({ items: updated });
+        syncWishlist(updated); // ✅ sync
       },
 
       isInWishlist: (id) => {
@@ -45,8 +60,9 @@ export const useWishlist = create<WishlistState>()(
     }),
     {
       name: "wishlist-storage",
+
       onRehydrateStorage: () => (state) => {
-        state?.setHasHydrated(true);
+        state?.setHasHydrated(true); // ✅ THIS FIXES LOADING
       },
     }
   )

@@ -1,16 +1,46 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { User } from "lucide-react";
+import { useEffect, useState } from "react";
 import { useCart } from "@/app/store/cart";
 import { useSession, signOut } from "next-auth/react";
+import { useWishlist } from "@/app/store/wishlist";
+import Image from "next/image";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const handleClose = () => setOpen(false);
+  const [profileOpen, setProfileOpen] = useState(false);
 
   const items = useCart((state) => state.items);
   const { data: session } = useSession();
+  const { setItems } = useWishlist();
+
+  useEffect(() => {
+    async function loadWishlist() {
+      try {
+        const res = await fetch("/api/wishlist", {
+          credentials: "include",
+        });
+
+        if (!res.ok) return;
+
+        const text = await res.text();
+        if (!text) return;
+
+        const data = JSON.parse(text);
+
+        setItems(data.items || []);
+      } catch (err) {
+        console.error("Wishlist load failed:", err);
+      }
+    }
+
+    if (session) {
+      loadWishlist();
+    }
+  }, [session, setItems]);
 
   return (
     <header className="w-full bg-white shadow-sm sticky top-0 z-50">
@@ -26,36 +56,85 @@ export default function Navbar() {
 
           <Link href="/" className="hover:text-black">Home</Link>
           <Link href="/shop" className="hover:text-black">Shop</Link>
-          <Link href="/about" className="hover:text-black">About</Link>
+          <Link href="/about" className="hover:text-black">About Us</Link>
           <Link href="/contact" className="hover:text-black">Contact</Link>
           <Link href="/wishlist">Wishlist</Link>
-
-          {/* AUTH STATE */}
-          {session ? (
-            <>
-              <span className="text-sm text-gray-600">
-                Hi, {session.user?.name}
-              </span>
-
-              <button
-                onClick={() => signOut()}
-                className="text-red-500 text-sm"
-              >
-                Logout
-              </button>
-            </>
-          ) : (
-            <Link href="/login" className="hover:text-black">
-              Login
-            </Link>
-          )}
-          <Link href="/register" onClick={handleClose}>
-            Sign Up
-          </Link>
         </nav>
 
         {/* CART BUTTON (DESKTOP) */}
-        <div className="hidden md:block">
+        <div className="hidden md:flex items-center gap-4">
+
+          {/* USER */}
+          <div className="relative">
+            <button
+              onClick={() => setProfileOpen(!profileOpen)}
+              className="w-10 h-10 flex items-center justify-center rounded-full border hover:bg-gray-100 transition overflow-hidden"
+            >
+              {session?.user?.image ? (
+                <Image
+                  src={session.user.image}
+                  alt="profile"
+                  width={40}
+                  height={40}
+                  className="object-cover"
+                />
+              ) : session?.user?.name ? (
+                <span className="font-medium">
+                  {session.user.name.charAt(0).toUpperCase()}
+                </span>
+              ) : (
+                <User size={18} />
+              )}
+            </button>
+
+            {/* DROPDOWN */}
+            {profileOpen && (
+              <div className="absolute right-0 mt-2 w-40 bg-white border rounded-lg shadow-md z-50">
+                {session ? (
+                  <>
+                    <Link
+                      href="/profile"
+                      className="block px-4 py-2 hover:bg-gray-100"
+                    >
+                      Profile
+                    </Link>
+
+                    <Link
+                      href="/orders"
+                      className="block px-4 py-2 hover:bg-gray-100"
+                    >
+                      Orders
+                    </Link>
+
+                    <button
+                      onClick={() => signOut()}
+                      className="w-full text-left px-4 py-2 text-red-500 hover:bg-gray-100"
+                    >
+                      Logout
+                    </button>
+                  </>
+                ) : (
+                  <>
+                    <Link
+                      href="/login"
+                      className="block px-4 py-2 hover:bg-gray-100"
+                    >
+                      Login
+                    </Link>
+
+                    <Link
+                      href="/register"
+                      className="block px-4 py-2 hover:bg-gray-100"
+                    >
+                      Sign Up
+                    </Link>
+                  </>
+                )}
+              </div>
+            )}
+          </div>
+
+          {/* CART */}
           <Link
             href="/cart"
             className="relative px-4 py-2 bg-black text-white rounded-full text-sm"
@@ -68,6 +147,7 @@ export default function Navbar() {
               </span>
             )}
           </Link>
+
         </div>
 
         {/* HAMBURGER */}
@@ -115,6 +195,10 @@ export default function Navbar() {
                 Hi, {session.user?.name}
               </p>
 
+              <Link href="/profile" onClick={handleClose}>
+                Profile
+              </Link>
+
               <button
                 onClick={() => {
                   signOut();
@@ -126,25 +210,55 @@ export default function Navbar() {
               </button>
             </>
           ) : (
-            <Link href="/login" onClick={handleClose}>
-              Login
-            </Link>
+            <>
+              <Link href="/login" onClick={handleClose}>
+                Login
+              </Link>
+
+              <Link href="/register" onClick={handleClose}>
+                Sign Up
+              </Link>
+            </>
           )}
 
           {/* CART */}
-          <Link
-            href="/cart"
-            onClick={handleClose}
-            className="px-6 py-2 bg-black text-white rounded-full relative"
-          >
-            Cart
+          <div className="flex items-center gap-4">
 
-            {items.length > 0 && (
-              <span className="ml-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full">
-                {items.length}
-              </span>
-            )}
-          </Link>
+            {/* USER */}
+            <Link
+              href={session ? "/profile" : "/login"}
+              className="w-10 h-10 flex items-center justify-center rounded-full border hover:bg-gray-100 transition overflow-hidden"
+            >
+              {session?.user?.image ? (
+                <Image
+                  src={session.user.image}
+                  alt="profile"
+                  className="w-full h-full object-cover"
+                />
+              ) : session?.user?.name ? (
+                <span className="font-medium">
+                  {session.user.name.charAt(0).toUpperCase()}
+                </span>
+              ) : (
+                <User size={18} />
+              )}
+            </Link>
+
+            {/* CART */}
+            <Link
+              href="/cart"
+              className="relative px-4 py-2 bg-black text-white rounded-full text-sm"
+            >
+              Cart
+
+              {items.length > 0 && (
+                <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full">
+                  {items.length}
+                </span>
+              )}
+            </Link>
+
+          </div>
         </nav>
       </div>
     </header>

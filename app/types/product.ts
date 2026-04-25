@@ -2,7 +2,7 @@ export type Product = {
   _id?: string;
   id: string;
   name: string;
-  price: string;
+  price: number;
   image: string;
 
   description: string;
@@ -16,4 +16,5 @@ export type Product = {
 
   productCode: string;
   discount?: number;
+  featured: boolean;
 };

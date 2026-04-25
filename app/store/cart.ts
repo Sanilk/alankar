@@ -1,12 +1,18 @@
+"use client";
+
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
 
+/* =========================
+   TYPES
+========================= */
 type CartItem = {
   id: string;
   name: string;
   price: number;
   image: string;
   quantity: number;
+  quantityAvailable: number;
 };
 
 type CartState = {
@@ -14,6 +20,7 @@ type CartState = {
   hasHydrated: boolean;
 
   setHasHydrated: (state: boolean) => void;
+  setItems: (items: CartItem[]) => void;
 
   addToCart: (item: Omit<CartItem, "quantity">) => void;
   removeFromCart: (id: string) => void;
@@ -22,60 +29,147 @@ type CartState = {
   clearCart: () => void;
 };
 
+/* =========================
+   API SYNC (SAFE)
+========================= */
+async function syncCart(items: CartItem[]) {
+  try {
+    const res = await fetch("/api/cart", {
+      method: "POST",
+      body: JSON.stringify({ items }),
+      headers: { "Content-Type": "application/json" },
+      credentials: "include",
+    });
+
+    if (!res.ok) return; // ignore if not logged in
+  } catch (err) {
+    console.error("Cart sync failed:", err);
+  }
+}
+
+/* =========================
+   DEBOUNCE (PREVENT SPAM)
+========================= */
+let syncTimeout: NodeJS.Timeout;
+
+/* =========================
+   STORE
+========================= */
 export const useCart = create<CartState>()(
   persist(
-    (set) => ({
+    (set, get) => ({
       items: [],
       hasHydrated: false,
 
+      /* ---------- HYDRATION ---------- */
       setHasHydrated: (state) => set({ hasHydrated: state }),
 
-      addToCart: (item) =>
-        set((state) => {
-          const existing = state.items.find((i) => i.id === item.id);
+      /* ---------- SET ITEMS ---------- */
+      setItems: (items) => {
+        set({ items });
+      },
 
-          if (existing) {
-            return {
-              items: state.items.map((i) =>
-                i.id === item.id
-                  ? { ...i, quantity: i.quantity + 1 }
-                  : i
-              ),
-            };
-          }
+      /* ---------- ADD ---------- */
+      addToCart: (product) => {
+        const state = get();
+        const existing = state.items.find((i) => i.id === product.id);
 
-          return {
-            items: [...state.items, { ...item, quantity: 1 }],
-          };
-        }),
+        let updatedItems: CartItem[];
 
-      removeFromCart: (id) =>
-        set((state) => ({
-          items: state.items.filter((i) => i.id !== id),
-        })),
+        if (existing) {
+          updatedItems = state.items.map((item) =>
+            item.id === product.id
+              ? {
+                  ...item,
+                  quantity: Math.min(
+                    item.quantity + 1,
+                    item.quantityAvailable
+                  ),
+                }
+              : item
+          );
+        } else {
+          updatedItems = [...state.items, { ...product, quantity: 1 }];
+        }
 
-      increaseQty: (id) =>
-        set((state) => ({
-          items: state.items.map((i) =>
-            i.id === id ? { ...i, quantity: i.quantity + 1 } : i
-          ),
-        })),
+        set({ items: updatedItems });
 
-      decreaseQty: (id) =>
-        set((state) => ({
-          items: state.items
-            .map((i) =>
-              i.id === id ? { ...i, quantity: i.quantity - 1 } : i
-            )
-            .filter((i) => i.quantity > 0),
-        })),
+        clearTimeout(syncTimeout);
+        syncTimeout = setTimeout(() => {
+          syncCart(updatedItems);
+        }, 300);
+      },
 
-      clearCart: () => set({ items: [] }),
+      /* ---------- REMOVE ---------- */
+      removeFromCart: (id) => {
+        const updatedItems = get().items.filter((i) => i.id !== id);
+
+        set({ items: updatedItems });
+
+        clearTimeout(syncTimeout);
+        syncTimeout = setTimeout(() => {
+          syncCart(updatedItems);
+        }, 300);
+      },
+
+      /* ---------- INCREASE ---------- */
+      increaseQty: (id) => {
+        const updatedItems = get().items.map((item) =>
+          item.id === id
+            ? {
+                ...item,
+                quantity: Math.min(
+                  item.quantity + 1,
+                  item.quantityAvailable
+                ),
+              }
+            : item
+        );
+
+        set({ items: updatedItems });
+
+        clearTimeout(syncTimeout);
+        syncTimeout = setTimeout(() => {
+          syncCart(updatedItems);
+        }, 300);
+      },
+
+      /* ---------- DECREASE ---------- */
+      decreaseQty: (id) => {
+        const updatedItems = get()
+          .items
+          .map((item) =>
+            item.id === id
+              ? { ...item, quantity: item.quantity - 1 }
+              : item
+          )
+          .filter((item) => item.quantity > 0);
+
+        set({ items: updatedItems });
+
+        clearTimeout(syncTimeout);
+        syncTimeout = setTimeout(() => {
+          syncCart(updatedItems);
+        }, 300);
+      },
+
+      /* ---------- CLEAR ---------- */
+      clearCart: () => {
+        set({ items: [] });
+
+        clearTimeout(syncTimeout);
+        syncTimeout = setTimeout(() => {
+          syncCart([]);
+        }, 300);
+      },
     }),
     {
       name: "cart-storage",
 
-      onRehydrateStorage: () => (state) => {
+      onRehydrateStorage: () => (state, error) => {
+        if (error) {
+          console.error("Hydration error:", error);
+        }
         state?.setHasHydrated(true);
       },
     }
